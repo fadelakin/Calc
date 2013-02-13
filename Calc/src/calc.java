@@ -25,5 +25,13 @@ public class calc {
 			default: System.out.print("Invalid");answer=0;break;
 		}
 		System.out.print("Answer: " + answer);
+		
+		BufferedReader keys = new BufferedReader (new
+			InputStreamReader(System.in));
+		int newoption, newfirst, newsecond, newanswer;
+		
+		System.out.print("Do you want to continue with new numbers?");
+		boolean enter;
+		
 	}
 }
