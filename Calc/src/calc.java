@@ -30,8 +30,31 @@ public class calc {
 			InputStreamReader(System.in));
 		int newoption, newfirst, newsecond, newanswer;
 		
-		System.out.print("Do you want to continue with new numbers?");
+		System.out.print("Do you want to continue with new numbers?\n");
+		System.out.print("Enter yes or no\n");
 		boolean enter;
+		if (enter == "yes") {
+			System.out.print("1: to add" +
+				"\n2: to multiply" +
+				"\n3: to subtract" +
+				"\nEnter option: ");
+			newoption = Integer.parseInt(keyboard.readLine());
+			System.out.print("Enter the first number: ");
+			newfirst = Integer.parseInt(keyboard.readLine());
+			System.out.print("Enter the second number: ");
+			newsecond = Integer.parseInt(keyboard.readLine());
+			
+			switch(newoption) {
+				
+				case 1: newanswer = newfirst + newsecond; break;
+				case 2: newanswer = newfirst * newsecond; break;
+				case 3: newanswer = newfirst - newsecond; break;
+				default: System.out.print("Brah, your answer is invalid");newanswer=0;break;
+			}
+			System.out.print("Answer: " + newanswer);
+		} else {
+			System.out.println("Goodbye");
+		}
 		
 	}
 }
